@@ -1,0 +1,65 @@
+{{define "content"}}
+<!------------------------------------------------------------------------------------------------------------>
+
+<body style="height:100vh">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="">Go EveryWhere</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Help</a></li>
+					<li><a href="">Profile</a></li>
+					<li><a href="">Map</a></li>
+					<li><a href="">Version</a></li>
+					<li><a href="">Action</a></li>
+					<li><a href="">Execute</a></li>
+					<li><a href="">Logout</a></li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<input type="text" class="form-control" placeholder="Search...">
+				</form>
+			</div>
+		</div>
+    </nav>
+
+	<div class="container-fluid rh95">
+		<div class="row rh100">
+			<div class="col-sm-3 col-md-2 sidebar rh100">
+				<h3>Directory</h3>
+				<ul class="nav nav-sidebar">
+					<li><a href="">(Back)</a></li>
+					<li><a href="">static</a></li>
+					<li><a href="">view</a></li>
+					<li><a href="">lib</a></li>
+					<li><a href="">(New Directory...)</a></li>
+				</ul>
+				<h3>File</h3>
+				<ul class="nav nav-sidebar" id="file-list">
+					<li class="active"><a href="">main.go</a></li>
+					<li class=""><a href="">model.go</a></li>
+					<li class=""><a href="">view.go</a></li>
+					<li class=""><a href="">control.go</a></li>
+					<li><a href="">(New File...)</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main rh100">
+				<h2 class="page-header " id="title">main.go</h2>
+				<div class="rh95">
+
+				{{template "editor" .}}
+
+				</div>
+			</div>
+		</div>
+    </div>
+
+</body>
+<!------------------------------------------------------------------------------------------------------------>
+{{end}}

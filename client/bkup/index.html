@@ -1,0 +1,136 @@
+{{define "content"}}
+<!------------------------------------------------------------------------------------------------------------>
+<style>
+  .CodeMirror { height: auto; border: 1px solid #ddd; font-size : 16px;}
+  .CodeMirror-scroll { min-height: 50vh; /*max-height: 80vh;*/ }
+  .CodeMirror pre { padding-left: 7px; line-height: 1.25; }
+</style>
+
+<body>
+	<div class="box-wrapper">
+		<div class="box box-left"></div>
+		<div class="box-handler"></div>
+		<div class="box box-right">
+		</div>
+	</div>
+</body>
+
+<!--
+<body>
+	<div class="bar top-bar">
+        <a class="left logo">Go Everywhere</a>
+        <div table-of-contents-button=".toc"></div>
+        <div feedback-button></div>
+    </div>
+    <div table-of-contents></div>
+    <div ng-view ng-cloak class="ng-cloak"></div>
+	<script src="/static/js/script.js"></script>
+</body>	
+-->
+
+<!--
+<body style="">
+    <div class="bar top-bar">
+		<h2>Go EveryWhere</h2>
+	</div>
+
+    <div class="relative-content">
+        <div id="left-side"></div>
+		<div vertical-slide="" left="#left-side" right="#right-side" class="ui-draggable"></div>
+        <div id="right-side" class="relative-content">
+            <div class="relative-content">
+                <div id="top-part"></div>
+                <div horizontal-slide="" top="#top-part" bottom="#bottom-part" class="ui-draggable"></div>
+                <div id="bottom-part"></div>
+            </div>
+        </div>
+    </div>
+</body>
+-->
+
+<!--
+<body>
+    <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow ">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">Go Everywhere</a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+	<div class="container-fluid">
+      <div class="row">
+	  
+        <nav class="col-md-2 d-none d-md-block bg-light">
+          <div class="sidebar-sticky">
+          </div>
+        </nav>
+				
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">main.cpp</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">Run</button>
+                <button class="btn btn-sm btn-outline-secondary">Format</button>
+              </div>
+              <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                <span data-feather="calendar"></span>
+				- Version -
+				</button>
+            </div>
+          </div>
+		  <div class="table-responsive">
+			<form style="position: relative; margin-top: .5em;" >
+				<textarea id="editor"></textarea>
+				<script>
+				var editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+					lineNumbers: true,
+					mode: "text/html",
+					matchBrackets: true,
+					//theme: "night",
+					extraKeys: {
+					"F11": function(cm) {
+						if(cm.getOption("fullScreen")){
+							cm.setOption("fullScreen", false);
+							cm.setOption("theme","");
+						}else{
+							cm.setOption("fullScreen", true);
+							cm.setOption("theme","night");
+						}
+					  
+					},
+					"Esc": function(cm) {
+					  if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+					},
+					"Ctrl-+": function(cm) {
+						var el = document.getElementsByClassName("CodeMirror")[0];
+						var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+						var fontSize = parseFloat(style); 
+						el.style.fontSize = (fontSize + 4) + 'px';
+					},
+					"Ctrl-=": function(cm) {
+						var el = document.getElementsByClassName("CodeMirror")[0];
+						var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+						var fontSize = parseFloat(style); 
+						el.style.fontSize = (fontSize + 4) + 'px';
+					},
+					"Ctrl--": function(cm) {
+						var el = document.getElementsByClassName("CodeMirror")[0];
+						var style = window.getComputedStyle(el, null).getPropertyValue('font-size');
+						var fontSize = parseFloat(style); 
+						el.style.fontSize = (fontSize - 4) + 'px';
+					}
+				  }
+				});
+				</script>
+			</form>
+		  </div>
+        </main>
+      </div>
+    </div>
+</body>
+-->
+<!------------------------------------------------------------------------------------------------------------>
+{{end}}

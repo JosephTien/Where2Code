@@ -1,0 +1,44 @@
+{{define "base"}}
+<!DOCTYPE html>
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="">
+<meta name="author" content="JTien">
+<link rel="shortcut icon" sizes="196x196" href="/static/favicon.ico">
+<title>GoEverywhere</title>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" sizes="196x196" href="/static/favicon.ico">
+<link href='//fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+-->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/dashboard.css">
+<link rel="stylesheet" href="/static/css/style.css">
+
+<link rel="stylesheet" href="/static/lib/codemirror/lib/codemirror.css">
+<!--<link rel="stylesheet" href="/static/lib/codemirror/doc/docs.css">-->
+<link rel="stylesheet" href="/static/lib/codemirror/addon/display/fullscreen.css">
+<link rel="stylesheet" href="/static/lib/codemirror/theme/night.css">
+
+<script src="/static/lib/codemirror/lib/codemirror.js"></script>
+<script src="/static/lib/codemirror/mode/go/go.js"></script>
+<script src="/static/lib/codemirror/mode/xml/xml.js"></script>
+<script src="/static/lib/codemirror/mode/javascript/javascript.js"></script>
+<script src="/static/lib/codemirror/mode/css/css.js"></script>
+<script src="/static/lib/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+<script src="/static/lib/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="/static/lib/codemirror/addon/display/fullscreen.js"></script>
+{{template "content" .}}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+<script src="/static/js/script.js"></script>
+
+</html>
+
+{{end}}
